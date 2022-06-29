@@ -13,7 +13,8 @@ body{background-color:#eeeeee;
 .navbar {display:flex;
     justify-content:center;
     margin-top:15px;
-    height:100%;
+    height:95vh;
+    max-height: 720px;
 
 
 }

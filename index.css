@@ -144,9 +144,8 @@ background-color:red;}
     .w3-bar{display: flex; 
     justify-content: center;
 align-items: center;
-
-border-top:4px solid #eeeeee;
 }
+.w10{border-top:4px solid #eeeeee;}
 
 
 

@@ -184,9 +184,42 @@ border: 1px solid black;
 
 
 
+    @media only screen and (max-width: 768px) {
+        
+        .navbar{flex-direction: column;
+        margin-top:100px;}
 
 
 
+    .navbar .profil{width:768px;
+        height:600px;
+        margin-top:150px;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        margin:0px;
+        
+      }
+
+      .navbar .profil .contacttablet{display: none;}
+      .navbar .profil .organization{display: none;}
+      .navbar .profil .h2{display: none;}
+
+
+     .navbar .icerik{width: 768px;
+    }
+
+
+     .navbar .icerik .icerikimg .img{width: 748px;}
+
+     .navbar .icerik .icerikimg{
+        margin:10px 0px
+     }
+
+     .w3-bar{width:748px;}
+
+
+    }
 
 
 

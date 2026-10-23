@@ -1,144 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-   
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Beautiful Baby ♡</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Georgia,serif;text-align:center;
+ color:#864b69;
+ background:linear-gradient(135deg,#fff0f6,#fbd6e7,#fff7fb);
+ overflow-x:hidden
+}
+section{padding:65px 20px;position:relative}
+h1{font-size:clamp(36px,8vw,65px);color:#cf6d9d}
+h2{color:#c66e96}
+p{font-size:18px;line-height:1.9}
+button{
+ border:0;border-radius:30px;padding:14px 24px;
+ background:#e9a2c0;color:white;font-size:16px;
+ cursor:pointer;box-shadow:0 5px 18px #d68aaf55
+}
+.hero{min-height:90vh;display:flex;flex-direction:column;
+ align-items:center;justify-content:center}
+.heart{position:fixed;bottom:-40px;animation:float 8s linear infinite;
+ pointer-events:none;z-index:5}
+@keyframes float{
+ to{transform:translateY(-115vh) rotate(35deg);opacity:0}
+}
+.envelope{
+ margin:30px auto;width:190px;height:125px;
+ background:#e9a4bf;border-radius:8px;cursor:pointer;
+ display:grid;place-items:center;font-size:45px;
+ box-shadow:0 8px 25px #bc739644;
+ transition:transform .3s
+}
+.envelope:hover{transform:scale(1.06)}
+#letter{display:none;max-width:600px;margin:25px auto;
+ background:#fffafd;padding:30px;border:1px solid #f4c8da;
+ border-radius:18px;box-shadow:0 8px 30px #d18aaa22}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:12px;max-width:650px;margin:25px auto}
+.photo{background:#ffffffaa;border:2px dashed #e5a2c0;
+ border-radius:15px;min-height:145px;display:grid;
+ place-items:center;overflow:hidden;padding:8px}
+.photo img{width:100%;height:190px;object-fit:cover}
+footer{padding:35px;background:#f8dce9}
+</style>
+</head>
+<body>
+<section class="hero">
+  <p>♡ A LITTLE SURPRISE FOR YOU ♡</p>
+  <h1>Happy Birthday,<br>My Beautiful Baby!</h1>
+  <p>Even miles apart, you're always in my heart.</p>
+  <button onclick="document.querySelector('#letter-section')
+    .scrollIntoView({behavior:'smooth'})">
+    Open Your Surprise 💌
+  </button>
+  <p>Made with all my love, Hasan ♡</p>
+</section>
 
-  </head>
-  <body>
+<section id="letter-section">
+  <h2>A Letter From My Heart 💌</h2>
+  <p>There's a little surprise waiting just for you.<br>
+     Tap the envelope to open it.</p>
+  <div class="envelope" onclick="openLetter()">💌</div>
+  <article id="letter">
+    <h2>To My Beautiful Baby ♡</h2>
+    <p>Happy birthday, my love.</p>
+    <p>You are the most wonderful gift that has ever
+    come into my life. Every moment with you is precious,
+    and even though distance keeps us apart, my heart
+    always finds its way to you.</p>
+    <p>If I could make one wish today, it would be to hold
+    you close, kiss your forehead, and see your beautiful
+    smile in person.</p>
+    <p>Until that day comes, remember that someone far away
+    is thinking of you, choosing you, and loving you every day.</p>
+    <p>Distance is only between our places, never between
+    our hearts. I can't wait for all the memories we still
+    have to make together.</p>
+    <p>Happy birthday, my beautiful baby. You mean more
+    to me than words could ever explain.</p>
+    <h2>Forever yours,<br>Hasan ♡</h2>
+    <button onclick="showSurprise()">One More Surprise 💗</button>
+    <p id="surprise" style="display:none">
+      My favorite place in the world is wherever you are. 🌷
+    </p>
+  </article>
+</section>
 
-<nav class="navbar">
-
-<div class="profil">
-<div ><img class="img" src="yuno-gasi-twirling-hair.gif"></div>
-<div>
-<h1 class="h1">Hasan Korkmaz</h1>
-<p>Web Designer</p>
-<div class="porfilici">
-<a href="https://github.com/Korkihasan" target="_blank"><button class="btn"><i class="bi bi-github"></i> My Github</button></a></div></div>
-<h3 class="h2">Organizations</h3>
-<div class="organization">
-<a href="gizli.html"><img class="img2" src="grafix.jpg"></a></div>
-
-<div class="contacttablet">
-<h3 class="contact">Contact</h3>
-<p><i class="bi bi-globe"></i> www.HasanKorkmaz.com.tr</p>
-<p><i class="bi bi-telephone-fill"></i> 0575 854 18 22</p>
-</div></div></div>
-</div>
-
-
-<div class="icerik">
-  <div class="icerikimg"><img class="img" src="bigfoto3.jpg"></div>
-
-
-  <div class="w3-bar w10 w3-white">
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge1')">Challenge1</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge2')">Challenge2</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge3')">Challenge3</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge4')">Challenge4</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge5')">Challenge5</button>
+<section>
+  <h2>Our Little World 📸</h2>
+  <p>Our favorite moments, together and forever.</p>
+  <div class="gallery">
+    <label class="photo">♡ Our first memory
+      <input type="file" accept="image/*" onchange="addPhoto(this)"
+      aria-label="Upload first memory">
+    </label>
+    <label class="photo">♡ My favorite picture
+      <input type="file" accept="image/*" onchange="addPhoto(this)"
+      aria-label="Upload favorite picture">
+    </label>
+    <label class="photo">♡ You and me
+      <input type="file" accept="image/*" onchange="addPhoto(this)"
+      aria-label="Upload couple picture">
+    </label>
+    <label class="photo">♡ A moment to remember
+      <input type="file" accept="image/*" onchange="addPhoto(this)"
+      aria-label="Upload special memory">
+    </label>
   </div>
-  <div class="w3-bar w3-white">
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge6')">Challenge6</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge7')">Challenge7</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge8')">Challenge8</button>
-    <button id="wbutton" class="w3-bar-item " onclick="openCity('challenge9')">Challenge9</button>
-    
-  
-  </div>
-  
-  <div id="challenge1" class="w3-container city">
-    <h2 class="h2ch">Challenge1</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing1.jpg">
-    <a class="chalbtn" href="https://hasankorkmazchallenge1.netlify.app/">1.Challenge git</a></div>
-  </div>
+</section>
 
-  
-  <div id="challenge2" class="w3-container city" style="display:none">
-    <h2 class="h2ch">Challenge2</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing2.jpg">
-      <a class="chalbtn" href="https://hasankorkmazchallenge2.netlify.app/">2.Challenge git</a></div>
-  
-  </div>
-  
-  <div id="challenge3" class="w3-container city" style="display:none">
-    <h2 class="h2ch">Challenge3</h2><br/>
-    <div class="ortakchal"><img class="resim"  src="challing3.jpg">
-      <a class="chalbtn" href="https://hasankorkmazchallenge3.netlify.app/">3.Challenge git</a></div>
+<section>
+  <h2>My Birthday Wish For You 🌙</h2>
+  <p>I wish you a year full of happiness, beautiful
+  surprises, peaceful nights, and every little thing
+  that makes you smile.</p>
+  <p>And I hope I get to be part of all of it.</p>
+  <h1>♡ I Love You ♡</h1>
+</section>
 
-  </div>
-  <div id="challenge4" class="w3-container city" style="display:none">
-    <h2 class="h2ch">Challenge4</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing4.jpg">
-      <a class="chalbtn" href="https://hasankorkmazchallenge4.netlify.app/">4.Challenge git</a></div>
-    
-  </div>
-  <div id="challenge5" class="w3-container city" style="display:none">
-    <h2 class="h2ch" >Challenge5</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing5.jpg">
-      <a class="chalbtn" href="https://hasankorkmazchallenge5.netlify.app/">5.Challenge git</a></div>
-    </div>
-    <div id="challenge6" class="w3-container city" style="display:none">
-      <h2 class="h2ch">Challenge6</h2><br/>
-      <div class="ortakchal"><img class="resim" src="challing6.jpg">
-        <a class="chalbtn" href="https://hasankorkmazchallenge6.netlify.app/">6.Challenge git</a></div>
-      
-  </div>
-  <div id="challenge7" class="w3-container city" style="display:none">
-    <h2 class="h2ch">Challenge6</h2><br/>
-    <div class="ortakchallange">
-      <div class="ortakchal"><img class="resim" src="challing7.jpg">
-        <a class="chalbtn" href="https://hasankorkmazchallenge7.netlify.app/">7.Challenge git</a></div>
-   
-    </div>
-    
-    
-  </div>
+<footer>
+  <p>Made with endless love by Hasan Korkmaz</p>
+  <p>To my beautiful baby, today and always. 🌸</p>
+</footer>
 
-  
-  <div id="challenge8" class="w3-container city" style="display:none"image.png>
-    <h2 class="h2ch">Challenge8</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing8.jpg">
-    <a class="chalbtn" href="https://hasankorkmazchallenge8.netlify.app/">8.Challenge git</a></div>
-  </div>
-
-  
-  <div id="challenge9" class="w3-container city" style="display:none">
-    <h2 class="h2ch">Challenge9</h2><br/>
-    <div class="ortakchal"><img class="resim" src="challing9.jpg">
-      <a class="chalbtn" href="https://hasankorkmazchallenge9.netlify.app/">9.Challenge git</a></div>
-  
-  </div>
-  
-
-
-
- 
-  
-    
-    <br/>
-  <br/>
-  </div>
-  
-</div>
-
-
-
-
-
-
-
-</nav>
-
-
-<script src="js.js"></script>
-
-
+<script>
+function openLetter(){
+ document.getElementById('letter').style.display='block';
+ document.getElementById('letter').scrollIntoView({behavior:'smooth',
+ block:'center'});
+}
+function showSurprise(){
+ document.getElementById('surprise').style.display='block';
+}
+function addPhoto(input){
+ if(!input.files||!input.files[0])return;
+ const reader=new FileReader();
+ reader.onload=e=>{
+   const box=input.parentElement;
+   box.querySelector('img')?.remove();
+   const img=document.createElement('img');
+   img.src=e.target.result;
+   img.alt='Our special memory';
+   box.prepend(img);
+   input.style.display='none';
+ };
+ reader.readAsDataURL(input.files[0]);
+}
+for(let i=0;i<18;i++){
+ const h=document.createElement('span');
+ h.className='heart';
+ h.textContent=['♡','♥','💕','✨'][i%4];
+ h.style.left=Math.random()*100+'%';
+ h.style.animationDelay=Math.random()*8+'s';
+ h.style.animationDuration=(6+Math.random()*7)+'s';
+ h.style.fontSize=(15+Math.random()*20)+'px';
+ h.style.color=['#e99cbd','#d97ba4','#f4b9d2'][i%3];
+ document.body.appendChild(h);
+}
+</script>
 </body>
 </html>
